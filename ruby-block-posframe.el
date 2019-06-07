@@ -73,6 +73,7 @@
   (add-hook 'pre-command-hook 'ruby-block-posframe-hide))
 
 (defun ruby-block-posframe-hide ()
+  (remove-hook 'pre-command-hook 'ruby-block-posframe-hide)
   (posframe-hide ruby-block-posframe-buffer))
 
 ;; * provide
